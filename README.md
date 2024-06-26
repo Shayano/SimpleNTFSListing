@@ -20,3 +20,10 @@ Install-Module -Name NTFSSecurity -Force
 1. Clonez ce dépôt ou copiez le script dans un fichier `.ps1` local.
 2. Modifiez les variables `$rootPath` et `$outputCsv` dans le script pour définir le chemin du dossier à analyser et le fichier CSV de sortie.
 3. Exécutez le script PowerShell.
+
+# Définition du chemin du dossier racine et du fichier CSV de sortie
+$rootPath = "C:\Chemin\Vers\Votre\Dossier"
+$outputCsv = "C:\Chemin\Vers\Votre\Fichier.csv"
+
+# Obtenir les ACLs jusqu'à une profondeur de 2 niveaux
+Get-NTFSPermissions -Path $rootPath -Depth 2
